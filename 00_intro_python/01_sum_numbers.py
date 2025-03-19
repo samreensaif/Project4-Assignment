@@ -1,3 +1,4 @@
+!mv sum_numbers.py 00_intro_python
 
 question_1='enter the first number: '
 question_2='enter the second number: '
