@@ -1,0 +1,74 @@
+
+print ("List Practice")
+print("="*15)
+
+fruits_list = ['apple', 'banana', 'orange', 'grape', 'pineapple']
+
+ # Print the length of the list.
+
+print("Length of the list: ",len(fruits_list))
+
+# Add 'mango' at the end of the list.
+
+fruits_list.append("mango")
+
+print("Updated List: ", fruits_list)
+
+# Index game
+
+print("\n")
+
+print("Index Game")
+print("="*15)
+print("\n")
+animals_list = ['cat', 'dog', 'elephant', 'tiger', 'lion']
+
+print("list of animals: ",animals_list)
+
+ques = input("what operation you want to perform on list. Access/Modify/Slice: ").lower()
+
+# access
+
+def access_index(lst,index):
+  try:
+    return lst[index]
+  except IndexError:
+    return "no such index is present"
+
+# Modify
+
+def modify_lst(lst,index,new_index):
+  try:
+     lst[index] = new_index
+     return lst
+  except:
+    return "out of range index"
+# slice
+
+
+def slice_list(lst,start_index,end_index):
+  try:
+    return lst[start_index:end_index]
+  except:
+    return "out of range index"
+
+# now the game starts
+
+if ques == "access":
+  ask = int(input("enter index: "))
+
+  print(access_index(animals_list,ask))
+
+elif ques == "modify":
+  ask1 = int(input("enter index: "))
+  ask2 = input("enter new element: ")
+  print(modify_lst(animals_list,ask1,ask2))
+
+elif ques == "slice":
+  ask3 = int(input("enter start index: "))
+  ask4 = int(input("enter end index: "))
+
+  print(slice_list(animals_list,ask3,ask4))
+
+else:
+  print("wrong input")
