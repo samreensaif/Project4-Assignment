@@ -1,0 +1,43 @@
+
+
+
+
+import random
+
+total_rounds = 5
+your_score = 0
+computer_score = 0
+
+print ("Welcome To The High_Low Game")
+print("="*30)
+
+for i in range(total_rounds):
+  print("Round: ",i+1)
+  print("\n")
+  computer_guess = random.randint(1, 100)
+  
+  user_guess = random.randint(1, 100)
+  print("You guess: ",user_guess)
+
+  ask = input("what you think your number is higher/lower than computer's number? (H/L): ").lower()
+
+  if (ask == "h" and user_guess > computer_guess) or (ask =='l' and user_guess < computer_guess):
+    print("You Won!")
+    print("\n")
+    print("Computer's guess: ",computer_guess)
+    your_score += 1
+  else:
+    print("You Lost!")
+    print("\n")
+    print("Computer's guess: ",computer_guess)
+    computer_score +=1
+   
+  print("="*24)
+  print("\n")
+
+print("Your Score: ",your_score)
+print("Computer Score: ",computer_score)
+
+print("Thanks for Playing !!!!")
+# milestone#2
+
