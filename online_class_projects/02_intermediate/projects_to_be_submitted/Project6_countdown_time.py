@@ -1,3 +1,5 @@
+
+
 import time
 
 count_time = int(input("Enter time in seconds: "))
